@@ -1,0 +1,143 @@
+/* Reset margins on html/body to remove white edges */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: #0f0808; /* fallback solid color */
+}
+
+/* Offset for fixed-top Bootstrap navbar (taller now) */
+body { padding-top: 96px; }
+
+/* Global + background */
+html { scroll-behavior: smooth; }
+
+.landing-page,
+.landing-page * { box-sizing: border-box; }
+
+.landing-page {
+  min-height: 100vh;
+  overflow: hidden;
+  background: repeating-linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.35) 0,
+      rgba(0, 0, 0, 0.35) 40px,
+      transparent 40px,
+      transparent 120px
+    ),
+    #0f0808;
+  color: #f4efe9;
+  font-family: "Montserrat", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+/* ===== Bootstrap navbar overrides ===== */
+.navbar.bg-dark {
+  background: linear-gradient(to bottom, rgba(15, 8, 8, 0.9), rgba(15, 8, 8, 0)) !important;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+.navbar-brand {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  color: #ffffff !important;
+  text-decoration: none;
+}
+.navbar-nav .nav-link {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #ffffff !important;
+  opacity: 0.9;
+  text-decoration: none;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+/* ===== Navbar spacing tweaks (more breathing room) ===== */
+.navbar {
+  padding-top: 1.1rem;
+  padding-bottom: 1.1rem;
+}
+.navbar-nav { gap: clamp(20px, 5vw, 48px); }
+.navbar-nav .nav-link {
+  padding: 0.25rem 0.5rem;
+  letter-spacing: 0.2px;
+}
+.navbar .container { max-width: 1200px; }
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus,
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+  opacity: 1;
+  color: #a8ff35 !important;
+  text-decoration: none;
+}
+
+/* -------- HERO -------- */
+.hero {
+  width: min(980px, 92%);
+  margin: 0 auto;
+  padding: 160px 0 96px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  text-align: center;
+  min-height: calc(100vh - 160px);
+}
+.budt-748-client-side-tutorial {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: clamp(36px, 7vw, 72px);
+  line-height: 1.05;
+  letter-spacing: 0.3px;
+  color: #ffffff;
+}
+.hi-i-m-giselle {
+  max-width: 900px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.6;
+  color: #ffffff;
+  margin-top: 6px;
+}
+
+/* CTA button */
+.cta {
+  display: inline-grid;
+  place-items: center;
+  width: 180px;
+  height: 57px;
+  border-radius: 50px;
+  background: #a8ff35;
+  color: #0a0a0a;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+  font-weight: 800;
+  transition: transform 0.08s ease, box-shadow 0.08s ease;
+}
+.cta:hover { transform: translateY(-1px); box-shadow: 0 10px 22px rgba(0,0,0,0.45); }
+.get-started { font-size: 20px; }
+
+/* Footer */
+.giselle-barretto-university-of-maryland-fall-2025 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 16px;
+  color: #cfc8bf;
+  padding-bottom: 36px;
+}
+
+/* Responsive */
+@media (max-width: 991.98px) {
+  .navbar-collapse { padding: 0.5rem 0; }
+  .navbar-nav { gap: 0.25rem; }
+  .navbar-nav .nav-link { padding: 0.5rem 0; }
+}
+@media (max-width: 700px) {
+  body { padding-top: 76px; }
+  .navbar-brand { font-size: 24px; }
+  .navbar-nav .nav-link { font-size: 18px; }
+}
