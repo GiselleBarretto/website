@@ -74,12 +74,13 @@ body {
 }
 
 /* ===== Contact Page ===== */
-.contact-page { padding: calc(var(--header-h) + 60px) 0 120px; }
+/* Increased top padding to add a little more distance from the navbar */
+.contact-page { padding: 32px 0 96px; }  /* top | sides | bottom */
 
 .contact-page .site-container {
   display: flex;
   flex-direction: column;
-  gap: 36px;
+  gap: 24px;
 }
 
 .contact-heading {
@@ -93,16 +94,16 @@ body {
 .contact-subtitle {
   font-size: 20px;
   line-height: 1.6;
-  margin: 0 0 24px;
+  margin: 4px 0 20px;
 }
 
 .contact-block h2 {
   font-size: 24px;
   font-weight: 700;
-  margin: 0 0 6px;
+  margin: 8px 0 6px;
 }
 .contact-block p {
-  margin: 4px 0;
+  margin: 2px 0;
   font-size: 20px;
 }
 
@@ -133,4 +134,5 @@ body {
 }
 @media (max-width: 700px) {
   body { padding-top: 76px; }
+  .contact-page { padding-top: 16px; }  /* a touch more space on mobile too */
 }
